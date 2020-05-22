@@ -1,0 +1,34 @@
+Use any OS and inside that OS you should have to installed docker software.
+always stop firewall
+systemctl stop firewalld
+
+to check docker services
+systemctl start docker systemctl status docker
+
+for checking container
+docker ps & docker ps -a
+
+install httpd package
+yum install httpd
+
+then move to html
+cd /var/www/html
+
+check their any file exits or not
+ls
+
+then create a file
+vi index.html
+
+write your program in index.html
+create another file called Dockerfile
+vim Dockerfile
+
+write your code
+create an image from Dockerfile
+docker build -t xyz .
+
+launch the container
+docker run -d --name work -p 80:80 xyz
+
+Thank You
